@@ -9,6 +9,10 @@ const router = Router();
 router.get('/', HomeController.home);
 router.post('/novousuario', HomeController.novoUsuario);
 
+router.get('/usuario/:id/mais', UserController.adicionarIdade);
+router.get('/usuario/:id/menos', UserController.diminuirIdade);
+router.get('/usuario/:id/deletar_usuario', UserController.deletarUsuario);
+
 router.get('/contato', InfoController.contato);
 router.get('/sobre', InfoController.sobre);
 

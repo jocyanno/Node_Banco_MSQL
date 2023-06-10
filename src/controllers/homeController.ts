@@ -6,12 +6,15 @@ import { Op } from 'sequelize';
 
 export const home = async (req: Request, res: Response)=>{
 
-    let results = await User.findAll({ where: { name: 'Ciclano'}});
+
+
+    /* let results = await User.findAll({ where: { name: 'Ciclano'}});
     if(results.length >0) {
         let usuario = results[0];
 
         await usuario.destroy();
     }
+    */
 
     /* await User.destroy({
         where: {
@@ -151,4 +154,4 @@ export const novoUsuario = async (req: Request, res: Response) => {
     }
 
     res.redirect('/');
-}
+};
